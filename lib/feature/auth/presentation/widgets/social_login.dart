@@ -2,7 +2,7 @@ import 'package:bookiastoreapp/core/constants/app_images.dart';
 import 'package:bookiastoreapp/core/styles/colors.dart';
 import 'package:bookiastoreapp/core/styles/text_style.dart';
 
-import 'package:bookiastoreapp/feature/auth/widgets/social_loginn.dart';
+import 'package:bookiastoreapp/feature/auth/presentation/widgets/social_loginn.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
@@ -37,7 +37,6 @@ class SocialLogin extends StatelessWidget {
           text: 'Sign in with Apple',
           onTap: () {},
         ),
-        
       ],
     );
   }

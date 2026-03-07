@@ -3,7 +3,7 @@ import 'package:bookiastoreapp/core/functions/navigation.dart';
 import 'package:bookiastoreapp/core/styles/colors.dart';
 import 'package:bookiastoreapp/core/styles/text_style.dart';
 import 'package:bookiastoreapp/core/widgets/mian_button.dart';
-import 'package:bookiastoreapp/feature/auth/page/login_screen.dart';
+import 'package:bookiastoreapp/feature/auth/presentation/page/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
@@ -35,7 +35,6 @@ class PasswordChangedScreen extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(20),
             child: MianButton(
-              
               text: 'Back to Login',
               onPressed: () {
                 pushReplacement(context, LoginScreen());

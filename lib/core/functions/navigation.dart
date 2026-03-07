@@ -8,15 +8,9 @@ void pushReplacement(BuildContext context, Widget newscreen) {
 }
 
 void pushTo(BuildContext context, Widget newscreen) {
-  Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => newscreen),
-  );
+  Navigator.push(context, MaterialPageRoute(builder: (context) => newscreen));
 }
 
 void pop(BuildContext context, Widget newscreen) {
-  Navigator.pop(
-    context,
-    MaterialPageRoute(builder: (context) => newscreen),
-  );
+  Navigator.pop(context, MaterialPageRoute(builder: (context) => newscreen));
 }

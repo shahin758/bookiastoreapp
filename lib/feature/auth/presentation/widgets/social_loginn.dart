@@ -32,7 +32,7 @@ class SocialLoginn extends StatelessWidget {
             CustomSvgPicture(path: path),
             Gap(9),
             Text(
-             text,
+              text,
               style: TextStyles.caption114.copyWith(color: AppColors.textcolor),
             ),
           ],

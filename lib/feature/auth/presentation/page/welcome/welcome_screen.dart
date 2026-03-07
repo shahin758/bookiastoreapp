@@ -4,8 +4,8 @@ import 'package:bookiastoreapp/core/styles/colors.dart';
 import 'package:bookiastoreapp/core/styles/text_style.dart';
 import 'package:bookiastoreapp/core/widgets/custom_svg_picture.dart';
 import 'package:bookiastoreapp/core/widgets/mian_button.dart';
-import 'package:bookiastoreapp/feature/auth/page/login_screen.dart';
-import 'package:bookiastoreapp/feature/auth/page/register_screen.dart';
+import 'package:bookiastoreapp/feature/auth/presentation/page/login_screen.dart';
+import 'package:bookiastoreapp/feature/auth/presentation/page/register_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
@@ -35,14 +35,21 @@ class WelcomeScreen extends StatelessWidget {
                 Gap(15),
                 Text('Order Your Book Now!', style: TextStyles.text20),
                 Spacer(flex: 4),
-                MianButton(text: 'Login', onPressed: () {pushTo(context, LoginScreen());}),
+                MianButton(
+                  text: 'Login',
+                  onPressed: () {
+                    pushTo(context, LoginScreen());
+                  },
+                ),
                 Gap(15),
                 MianButton(
                   bgColor: AppColors.backgroundcolor,
                   text: 'Register',
                   textColor: AppColors.darkcolor,
                   borderColor: AppColors.darkcolor,
-                  onPressed: () {pushTo(context,  RegisterScreen());},
+                  onPressed: () {
+                    pushTo(context, RegisterScreen());
+                  },
                 ),
                 Spacer(flex: 1),
               ],

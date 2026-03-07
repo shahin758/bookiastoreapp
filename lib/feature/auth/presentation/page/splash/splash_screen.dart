@@ -2,7 +2,8 @@ import 'package:bookiastoreapp/core/constants/app_images.dart';
 import 'package:bookiastoreapp/core/functions/navigation.dart';
 import 'package:bookiastoreapp/core/styles/text_style.dart';
 import 'package:bookiastoreapp/core/widgets/custom_svg_picture.dart';
-import 'package:bookiastoreapp/feature/welcome/welcome_screen.dart';
+import 'package:bookiastoreapp/feature/auth/presentation/page/welcome/welcome_screen.dart';
+
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 

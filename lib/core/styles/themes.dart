@@ -3,7 +3,6 @@ import 'package:bookiastoreapp/core/styles/colors.dart';
 import 'package:bookiastoreapp/core/styles/text_style.dart';
 import 'package:flutter/material.dart';
 
-
 abstract class AppThemes {
   static ThemeData get lightTheme => ThemeData(
     fontFamily: AppFonts.dmSerif,
@@ -15,10 +14,7 @@ abstract class AppThemes {
       surfaceTintColor: Colors.transparent,
     ),
     dividerTheme: DividerThemeData(color: AppColors.bordercolor),
-    colorScheme: ColorScheme.fromSeed(
-      seedColor: AppColors.primaryColor,
-      
-    ),
+    colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primaryColor),
 
     textButtonTheme: TextButtonThemeData(
       style: TextButton.styleFrom(

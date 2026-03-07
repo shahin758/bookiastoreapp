@@ -12,4 +12,9 @@ abstract class AppImages {
   static const String home = 'assets/icons/home.svg';
   static const String logout = 'assets/icons/logout.svg';
   static const String profile = 'assets/icons/profile.svg';
+  static const String loading = 'assets/images/loading.json';
+
+    
+
+
 }

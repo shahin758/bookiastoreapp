@@ -6,10 +6,14 @@ class PasswordTextFormField extends StatefulWidget {
     super.key,
     required this.hintText,
     this.controller,
+    this.validator,
+    this.onTap,
   });
 
   final String? hintText;
   final TextEditingController? controller;
+  final String? Function(String?)? validator;
+  final Function()? onTap;
 
   @override
   State<PasswordTextFormField> createState() => _PasswordTextFormFieldState();
@@ -36,15 +40,7 @@ class _PasswordTextFormFieldState extends State<PasswordTextFormField> {
               : const Icon(Icons.remove_red_eye),
         ),
       ),
-      validator: (input) {
-        if (input!.isEmpty) {
-          return 'Wrong Password';
-        }
-        return null;
-      },
-      onTapOutside: (event) {
-        FocusManager.instance.primaryFocus?.unfocus();
-      },
+      validator: widget.validator,
     );
   }
 }
