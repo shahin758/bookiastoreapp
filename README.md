@@ -4,12 +4,15 @@ Elevating the Digital Reading Experience.
 Bookia is a high-performance, cross-platform application designed to streamline the way users discover, organize, and consume literature.  Bookia provides a frictionless gateway to a world of knowledge.
 
 # FirstCommit for Bookia Appstore :
-- (1) creating Splash Screen and make an future delayed in this screen for (3 seconds )
-- (2) creating home screen and have two buttons >> one for (Login Screen) and the other button for (Register Screen)
-- (3) the login screen it contains tw text form fields and make a validation to it and two options for login with (google and apple)
-- (4) Register Screen to make a new account
-- (5) forget password screen and it have an one text form field to enter your email and send the code to your email
-- (6) Otp verfication screen to writeh the code 
+- (1) Created a Splash Screen with a Future.delayed of 3 seconds.
+- (2) Created a Home Screen that contains two buttons: one for the Login Screen and the other for the Register Screen.
+- (3) The Login Screen contains two TextFormFields with validation, and two options to log in using Google and Apple.
+- (4) Created a Register Screen to allow users to create a new account.
+- (5) Created a Forgot Password Screen that contains one TextFormField to enter the email address and send the verification code to the email.
+- (6) Created an OTP Verification Screen where the user can enter the verification code.
+- (7) Implemented state management and validation on the Login Screen.
+- (8) Implemented validation on the Register Screen and added a loading state for the whole page.
+- (9) To implement the loading state, I used BlocConsumer to show the loading indicator on the entire page instead of only on the button. 
 
 
 ## 🖼️ Screenshots:
