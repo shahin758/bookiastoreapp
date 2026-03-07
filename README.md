@@ -25,6 +25,9 @@ Bookia is a high-performance, cross-platform application designed to streamline 
 
 <img width="300" height="800" alt="Screenshot 2026-03-07 152658" src="https://github.com/user-attachments/assets/adf8a1dc-4350-427d-b5af-22615a78ea48" />
 <img width="300" height="800" alt="Screenshot 2026-03-07 152802" src="https://github.com/user-attachments/assets/1de94265-4863-4713-ae79-61f9edbe43e3" />
+<img width="300" height="800" alt="Screenshot 2026-03-07 152635" src="https://github.com/user-attachments/assets/6e5c8524-7972-4f8e-a513-a9ea3abf1603" />
+<img width="300" height="800" alt="Screenshot 2026-03-07 152421" src="https://github.com/user-attachments/assets/351b7014-c492-4820-b39b-6c6e0d106b41" />
+
 
 
 
