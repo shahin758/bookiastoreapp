@@ -3,7 +3,7 @@ Elevating the Digital Reading Experience.
 
 Bookia is a high-performance, cross-platform application designed to streamline the way users discover, organize, and consume literature.  Bookia provides a frictionless gateway to a world of knowledge.
 
-🚀 Key Features:
+## 🚀 Key Features:
 - (1) Created a Splash Screen with a Future.delayed of 3 seconds.
 - (2) Created a Home Screen that contains two buttons: one for the Login Screen and the other for the Register Screen.
 - (3) The Login Screen contains two TextFormFields with validation, and two options to log in using Google and Apple.
@@ -15,11 +15,11 @@ Bookia is a high-performance, cross-platform application designed to streamline 
 - (9) To implement the loading state, I used BlocConsumer to show the loading indicator on the entire page instead of only on the button. 
 
 
-🏗️ Technical Architecture:
+## 🏗️ Technical Architecture:
 "The project follows a Feature-First folder structure, promoting a clean separation of concerns.
 By isolating the data, domain, and presentation layers within each feature, the codebase remains decoupled, testable, and easy to navigate as the application scales."
 
-🛠️ Tech Stack:
+## 🛠️ Tech Stack:
 Framework: Flutter (Latest Stable)
 Language: Dart
 Architecture: Feature-First / Clean Architecture
