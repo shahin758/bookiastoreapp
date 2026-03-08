@@ -1,6 +1,7 @@
 import 'dart:developer';
 import 'package:bookiastoreapp/core/services/dio/apis.dart';
 import 'package:bookiastoreapp/core/services/dio/dio_provider.dart';
+import 'package:bookiastoreapp/core/services/local/shared_pref.dart';
 import 'package:bookiastoreapp/feature/auth/data/models/auth_reponse/register_params.dart';
 import 'package:bookiastoreapp/feature/auth/data/models/auth_reponse/register_response.dart';
 import 'package:bookiastoreapp/feature/auth/data/models/otpcode_response.dart';
@@ -15,6 +16,8 @@ class AuthRepo {
       if (response.statusCode == 201) {
         response.data;
         var data = AuthResponse.fromJson(response.data);
+        SharedPref.setToken(data.data?.token ?? '');
+        SharedPref.setUserInfo(data.data!.user);
         return data;
       } else {
         return null;
@@ -34,6 +37,8 @@ class AuthRepo {
       if (response.statusCode == 200) {
         response.data;
         var data = AuthResponse.fromJson(response.data);
+        SharedPref.setToken(data.data?.token ?? '');
+        SharedPref.setUserInfo(data.data!.user);
         return data;
       } else {
         return null;
@@ -84,26 +89,26 @@ class AuthRepo {
     }
   }
 
- static Future<Otpcode?> resetpassword(RegisterParams params) async {
-  try {
-    var response = await DioProvider.post(
-      endpoint: Apis.otpcode,
-      data: params.toJson(),
-    );
+  static Future<Otpcode?> resetpassword(RegisterParams params) async {
+    try {
+      log(params.toJson().toString());
+      var response = await DioProvider.post(
+        endpoint: Apis.otpcode,
+        data: params.toJson(),
+      );
 
-    if (response.statusCode == 200) {
-      return Otpcode.fromJson(response.data);
-    }
+      if (response.statusCode == 200) {
+        return Otpcode.fromJson(response.data);
+      }
 
-    if (response.statusCode == 500) {
+      if (response.statusCode == 500) {
+        return null;
+      }
+
+      return null;
+    } catch (e) {
+      log(e.toString());
       return null;
     }
-
-    return null;
-
-  } catch (e) {
-    log(e.toString());
-    return null;
   }
-}
 }

@@ -1,6 +1,7 @@
 import 'package:bookiastoreapp/core/constants/app_images.dart';
 import 'package:bookiastoreapp/core/styles/colors.dart';
 import 'package:bookiastoreapp/core/widgets/custom_svg_picture.dart';
+import 'package:bookiastoreapp/feature/home/presentation/page/home_screen.dart';
 import 'package:flutter/material.dart';
 
 class MainAppScreen extends StatefulWidget {
@@ -13,7 +14,7 @@ class MainAppScreen extends StatefulWidget {
 class _MainAppScreenState extends State<MainAppScreen> {
   int currentIndex = 0;
   List<Widget> screens = [
-   Center(child: Text('Home'),),
+   HomeScreen(),
    Center(child: Text('WishList'),),
    Center(child: Text('cart'),),
    Center(child: Text('Profile'),),
@@ -21,7 +22,7 @@ class _MainAppScreenState extends State<MainAppScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: screens[currentIndex],
+      body: screens[currentIndex], 
 
       bottomNavigationBar: _bottomNavBar(),
     );

@@ -22,7 +22,23 @@ abstract class AppThemes {
         minimumSize: Size(60, 30),
       ),
     ),
-
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      type: BottomNavigationBarType.fixed,
+      selectedItemColor: AppColors.primaryColor,
+      unselectedItemColor: AppColors.textcolor,
+      backgroundColor: Colors.transparent,
+      selectedLabelStyle: TextStyles.caption212.copyWith(
+        fontWeight: FontWeight.w600,
+        height: 2,
+      ),
+      unselectedLabelStyle: TextStyles.caption212.copyWith(
+        fontWeight: FontWeight.w600,
+        height: 2,
+      ),
+      showSelectedLabels: false,
+      showUnselectedLabels: false,
+      elevation: 0,
+    ),
     inputDecorationTheme: InputDecorationTheme(
       hintStyle: TextStyles.body16.copyWith(color: AppColors.textcolor),
       fillColor: AppColors.accentcolor,

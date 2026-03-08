@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:bookiastoreapp/core/constants/app_images.dart';
 import 'package:bookiastoreapp/core/functions/navigation.dart';
@@ -45,7 +44,8 @@ class LoginScreen extends StatelessWidget {
         body: BlocConsumer<AuthCubit, AuthState>(
           listener: (context, state) {
             if (state is AuthSuccessState) {
-              log('success');
+             
+              pushToBase(context, MainAppScreen());
             } else if (state is AuthErrorState) {
               showErrorDialog(context, state.message);
             } else if (state is AuthLoadingState) {
@@ -107,19 +107,18 @@ class LoginScreen extends StatelessWidget {
                         ],
                       ),
                       Gap(30),
-                      
-                        MianButton(
-                          bgColor: AppColors.primaryColor,
-                          text: 'Login',
-                          textColor: AppColors.backgroundcolor,
-                          onPressed: () {
-                            pushReplacement(context, MainAppScreen());  
-                            if (cubit.formKey.currentState!.validate()) {
-                              cubit.login();
-                            }
-                          },
-                        ),
-                      
+
+                      MianButton(
+                        bgColor: AppColors.primaryColor,
+                        text: 'Login',
+                        textColor: AppColors.backgroundcolor,
+                        onPressed: () {
+                          if (cubit.formKey.currentState!.validate()) {
+                            cubit.login();
+                            pushReplacement(context, MainAppScreen());
+                          }
+                        },
+                      ),
 
                       Gap(35),
                       SocialLogin(),
