@@ -26,8 +26,12 @@ Architecture: Feature-First / Clean Architecture
 
 ## 🖼️ Screenshots:
 
-<img width="300" height="800" alt="Splash Screen" src="https://github.com/user-attachments/assets/b352eb79-8c6e-4114-9805-8bc22c32e7dc" />
-<img width="300" height="800" alt="Welcome Screen" src="https://github.com/user-attachments/assets/4b9ddcd5-1bba-4273-a12e-8fd49525d5c8" />
+  # Splash screen - Welcome screen :
+
+<img width="250" height="750" alt="Splash Screen" src="https://github.com/user-attachments/assets/b352eb79-8c6e-4114-9805-8bc22c32e7dc" />
+<img width="250" height="750" alt="Welcome Screen" src="https://github.com/user-attachments/assets/4b9ddcd5-1bba-4273-a12e-8fd49525d5c8" />
+
+
 <img width="300" height="800" alt="Login Screen" src="https://github.com/user-attachments/assets/6bb1db4d-43ca-408a-91a5-c4a1e8b402ce" />
 <img width="300" height="800" alt="Register Screen" src="https://github.com/user-attachments/assets/7ad09581-3bd3-4cd3-ba3d-45f4c0ccabda" />
 <img width="300" height="800" alt="forget password screen" src="https://github.com/user-attachments/assets/ee1730df-b645-478a-9175-d69a520d496d" />
