@@ -1,4 +1,4 @@
-<img width="1080" height="2400" alt="Screenshot_1772999936" src="https://github.com/user-attachments/assets/52e38ca4-74ca-46a1-9dec-322b6a35d728" /># Bookia Appstore
+## Bookia Appstore
 Elevating the Digital Reading Experience.
 
 Bookia is a high-performance, cross-platform application designed to streamline the way users discover, organize, and consume literature.  Bookia provides a frictionless gateway to a world of knowledge.
