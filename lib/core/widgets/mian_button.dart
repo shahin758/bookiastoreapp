@@ -9,16 +9,16 @@ class MianButton extends StatelessWidget {
     required this.onPressed,
     this.bgColor = AppColors.primaryColor,
     this.borderColor,
-    this.minimumWidth = double.infinity,
-    this.minimumHeight = 56,
+    this.minWidth = double.infinity,
+    this.minHeight = 56,
     this.textColor = AppColors.backgroundcolor,
   });
   final String text;
   final Function() onPressed;
   final Color bgColor;
   final Color? borderColor;
-  final double minimumWidth;
-  final double minimumHeight;
+   final double minWidth;
+  final double minHeight;
   final Color textColor;
 
   @override
@@ -27,7 +27,8 @@ class MianButton extends StatelessWidget {
       style: ElevatedButton.styleFrom(
         backgroundColor: bgColor,
         padding: EdgeInsets.zero,
-        minimumSize: Size(minimumWidth, minimumHeight),
+         maximumSize: Size(minWidth, minHeight),
+        minimumSize: Size(minWidth, minHeight),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
 
         side: borderColor != null ? BorderSide(color: borderColor!) : null,

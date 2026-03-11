@@ -2,17 +2,15 @@ import 'dart:developer';
 
 import 'package:bookiastoreapp/core/constants/app_images.dart';
 import 'package:bookiastoreapp/core/functions/navigation.dart';
+import 'package:bookiastoreapp/core/routes/routes.dart';
 import 'package:bookiastoreapp/core/styles/colors.dart';
 import 'package:bookiastoreapp/core/styles/text_style.dart';
 import 'package:bookiastoreapp/core/widgets/custom_svg_picture.dart';
 import 'package:bookiastoreapp/core/widgets/dialogs.dart';
-
 import 'package:bookiastoreapp/core/widgets/mian_button.dart';
 import 'package:bookiastoreapp/core/widgets/password_text_form_field.dart';
 import 'package:bookiastoreapp/feature/auth/presentation/cubit/auth_cubit.dart';
 import 'package:bookiastoreapp/feature/auth/presentation/cubit/auth_state.dart';
-import 'package:bookiastoreapp/feature/auth/presentation/page/otp_verfication_screen.dart';
-import 'package:bookiastoreapp/feature/auth/presentation/page/password_changed_screen.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -30,7 +28,7 @@ class CreateNewPasswordScreen extends StatelessWidget {
           centerTitle: false,
           automaticallyImplyLeading: false,
           title: GestureDetector(
-            onTap: () => pop(context, OtpVerficationScreen()),
+            onTap: () => pop(context, Routes.otpverfication),
             child: Padding(
               padding: const EdgeInsets.all(10),
               child: CustomSvgPicture(path: AppImages.back),
@@ -39,7 +37,7 @@ class CreateNewPasswordScreen extends StatelessWidget {
         ),
         body: BlocConsumer<AuthCubit, AuthState>(
           listener: (context, state) {
-              if (state is AuthSuccessState) {
+            if (state is AuthSuccessState) {
               log('success');
             } else if (state is AuthErrorState) {
               showErrorDialog(context, state.message);
@@ -80,8 +78,10 @@ class CreateNewPasswordScreen extends StatelessWidget {
                       text: 'Reset Password',
                       textColor: AppColors.backgroundcolor,
                       onPressed: () {
-                        pushTo(context, PasswordChangedScreen());
+                        pushTo(context, Routes.passwordchanged);
                       },
+                      minWidth: 0,
+                      minHeight: 0,
                     ),
                   ],
                 ),

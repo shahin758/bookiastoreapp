@@ -1,8 +1,8 @@
 import 'dart:developer';
-
 import 'package:bookiastoreapp/core/constants/app_images.dart';
 import 'package:bookiastoreapp/core/functions/navigation.dart';
 import 'package:bookiastoreapp/core/functions/validations.dart';
+import 'package:bookiastoreapp/core/routes/routes.dart';
 import 'package:bookiastoreapp/core/styles/colors.dart';
 import 'package:bookiastoreapp/core/styles/text_style.dart';
 import 'package:bookiastoreapp/core/widgets/custom_svg_picture.dart';
@@ -11,10 +11,7 @@ import 'package:bookiastoreapp/core/widgets/dialogs.dart';
 import 'package:bookiastoreapp/core/widgets/mian_button.dart';
 import 'package:bookiastoreapp/feature/auth/presentation/cubit/auth_cubit.dart';
 import 'package:bookiastoreapp/feature/auth/presentation/cubit/auth_state.dart';
-
-import 'package:bookiastoreapp/feature/auth/presentation/page/otp_verfication_screen.dart';
 import 'package:bookiastoreapp/feature/auth/presentation/widgets/textspan.dart';
-import 'package:bookiastoreapp/feature/auth/presentation/page/welcome/welcome_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
@@ -31,7 +28,7 @@ class ForgetPasswordScreen extends StatelessWidget {
           centerTitle: false,
           automaticallyImplyLeading: false,
           title: GestureDetector(
-            onTap: () => pop(context, WelcomeScreen()),
+            onTap: () => pop(context, Routes.welcomescreen),
             child: Padding(
               padding: const EdgeInsets.all(10),
               child: CustomSvgPicture(path: AppImages.back),
@@ -79,19 +76,20 @@ class ForgetPasswordScreen extends StatelessWidget {
                       },
                     ),
                     Gap(40),
-                   
-                      MianButton(
-                        bgColor: AppColors.primaryColor,
-                        text: 'Send Code ',
-                        textColor: AppColors.backgroundcolor,
-                        onPressed: () {
-                          pushTo(context, OtpVerficationScreen());
-                          if (cubit.formKey.currentState!.validate()) {
-                            cubit.forgetpassword();
-                          }
-                        },
-                      ),
-                    
+
+                    MianButton(
+                      bgColor: AppColors.primaryColor,
+                      text: 'Send Code ',
+                      textColor: AppColors.backgroundcolor,
+                      onPressed: () {
+                        pushTo(context, Routes.otpverfication);
+                        if (cubit.formKey.currentState!.validate()) {
+                          cubit.forgetpassword();
+                        }
+                      },
+                      minWidth: 0,
+                      minHeight: 0,
+                    ),
 
                     Gap(361),
                     Center(

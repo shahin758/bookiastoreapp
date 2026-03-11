@@ -1,6 +1,6 @@
-
 import 'package:bookiastoreapp/core/constants/app_images.dart';
 import 'package:bookiastoreapp/core/functions/navigation.dart';
+import 'package:bookiastoreapp/core/routes/routes.dart';
 import 'package:bookiastoreapp/core/styles/colors.dart';
 import 'package:bookiastoreapp/core/styles/text_style.dart';
 import 'package:bookiastoreapp/core/widgets/custom_svg_picture.dart';
@@ -10,11 +10,7 @@ import 'package:bookiastoreapp/core/widgets/mian_button.dart';
 import 'package:bookiastoreapp/core/widgets/password_text_form_field.dart';
 import 'package:bookiastoreapp/feature/auth/presentation/cubit/auth_cubit.dart';
 import 'package:bookiastoreapp/feature/auth/presentation/cubit/auth_state.dart';
-
-import 'package:bookiastoreapp/feature/auth/presentation/page/login_screen.dart';
 import 'package:bookiastoreapp/feature/auth/presentation/widgets/textspan.dart';
-import 'package:bookiastoreapp/feature/auth/presentation/page/welcome/welcome_screen.dart';
-import 'package:bookiastoreapp/feature/main/main_app_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
@@ -31,7 +27,7 @@ class RegisterScreen extends StatelessWidget {
           centerTitle: false,
           automaticallyImplyLeading: false,
           title: GestureDetector(
-            onTap: () => pop(context, WelcomeScreen()),
+            onTap: () => pop(context, Routes.welcomescreen),
             child: Padding(
               padding: const EdgeInsets.all(10),
               child: CustomSvgPicture(path: AppImages.back),
@@ -42,8 +38,7 @@ class RegisterScreen extends StatelessWidget {
         body: BlocConsumer<AuthCubit, AuthState>(
           listener: (context, state) {
             if (state is AuthSuccessState) {
-           
-               pushToBase(context, MainAppScreen());
+              pushToBase(context, Routes.mainappscreen);
             } else if (state is AuthErrorState) {
               showErrorDialog(context, state.message);
             } else if (state is AuthLoadingState) {
@@ -115,6 +110,8 @@ class RegisterScreen extends StatelessWidget {
                             cubit.register();
                           }
                         },
+                        minWidth: 0,
+                        minHeight: 0,
                       ),
 
                       Gap(35),
@@ -123,7 +120,7 @@ class RegisterScreen extends StatelessWidget {
                         text: '  Login Now',
                         text2: 'Already have an account?  ',
                         onPressed: () {
-                          pushTo(context, LoginScreen());
+                          pushTo(context, Routes.loginscreen);
                         },
                       ),
                     ],

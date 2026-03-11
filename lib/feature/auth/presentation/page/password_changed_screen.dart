@@ -1,5 +1,6 @@
 import 'package:bookiastoreapp/core/constants/app_images.dart';
 import 'package:bookiastoreapp/core/functions/navigation.dart';
+import 'package:bookiastoreapp/core/routes/routes.dart';
 import 'package:bookiastoreapp/core/styles/colors.dart';
 import 'package:bookiastoreapp/core/styles/text_style.dart';
 import 'package:bookiastoreapp/core/widgets/mian_button.dart';
@@ -37,8 +38,8 @@ class PasswordChangedScreen extends StatelessWidget {
             child: MianButton(
               text: 'Back to Login',
               onPressed: () {
-                pushReplacement(context, LoginScreen());
-              },
+                pushReplacement(context, Routes.loginscreen);
+              }, minWidth: 0, minHeight: 0,
             ),
           ),
         ],

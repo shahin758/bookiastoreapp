@@ -2,19 +2,15 @@ import 'dart:developer';
 
 import 'package:bookiastoreapp/core/constants/app_images.dart';
 import 'package:bookiastoreapp/core/functions/navigation.dart';
+import 'package:bookiastoreapp/core/routes/routes.dart';
 import 'package:bookiastoreapp/core/styles/colors.dart';
 import 'package:bookiastoreapp/core/styles/text_style.dart';
 import 'package:bookiastoreapp/core/widgets/custom_svg_picture.dart';
 import 'package:bookiastoreapp/core/widgets/dialogs.dart';
-
 import 'package:bookiastoreapp/core/widgets/mian_button.dart';
 import 'package:bookiastoreapp/feature/auth/presentation/cubit/auth_cubit.dart';
 import 'package:bookiastoreapp/feature/auth/presentation/cubit/auth_state.dart';
-
-import 'package:bookiastoreapp/feature/auth/presentation/page/forget_password_screen.dart';
-import 'package:bookiastoreapp/feature/auth/presentation/page/password_changed_screen.dart';
 import 'package:bookiastoreapp/feature/auth/presentation/widgets/textspan.dart';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
@@ -32,7 +28,7 @@ class OtpVerficationScreen extends StatelessWidget {
           centerTitle: false,
           automaticallyImplyLeading: false,
           title: GestureDetector(
-            onTap: () => pop(context, ForgetPasswordScreen()),
+            onTap: () => pop(context, Routes.forgetpassword),
             child: Padding(
               padding: const EdgeInsets.all(10),
               child: CustomSvgPicture(path: AppImages.back),
@@ -41,7 +37,7 @@ class OtpVerficationScreen extends StatelessWidget {
         ),
         body: BlocConsumer<AuthCubit, AuthState>(
           listener: (context, state) {
-              if (state is AuthSuccessState) {
+            if (state is AuthSuccessState) {
               log('success');
             } else if (state is AuthErrorState) {
               showErrorDialog(context, state.message);
@@ -73,9 +69,11 @@ class OtpVerficationScreen extends StatelessWidget {
                       text: 'Verify ',
                       textColor: AppColors.backgroundcolor,
                       onPressed: () {
-                        pushReplacement(context, PasswordChangedScreen());
+                        pushReplacement(context, Routes.passwordchanged);
                         cubit.otpcode();
                       },
+                      minWidth: 0,
+                      minHeight: 0,
                     ),
                     Gap(340),
                     Center(

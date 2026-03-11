@@ -1,5 +1,6 @@
 import 'package:bookiastoreapp/core/constants/app_images.dart';
 import 'package:bookiastoreapp/core/functions/navigation.dart';
+import 'package:bookiastoreapp/core/routes/routes.dart';
 import 'package:bookiastoreapp/core/styles/colors.dart';
 import 'package:bookiastoreapp/core/styles/text_style.dart';
 import 'package:bookiastoreapp/core/widgets/custom_svg_picture.dart';
@@ -38,7 +39,7 @@ class WelcomeScreen extends StatelessWidget {
                 MianButton(
                   text: 'Login',
                   onPressed: () {
-                    pushTo(context, LoginScreen());
+                    pushTo(context, Routes.loginscreen);
                   },
                 ),
                 Gap(15),
@@ -48,7 +49,7 @@ class WelcomeScreen extends StatelessWidget {
                   textColor: AppColors.darkcolor,
                   borderColor: AppColors.darkcolor,
                   onPressed: () {
-                    pushTo(context, RegisterScreen());
+                    pushTo(context, Routes.registerscreen);
                   },
                 ),
                 Spacer(flex: 1),
