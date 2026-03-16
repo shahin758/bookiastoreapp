@@ -4,7 +4,6 @@ import 'package:bookiastoreapp/core/routes/routes.dart';
 import 'package:bookiastoreapp/core/styles/colors.dart';
 import 'package:bookiastoreapp/core/styles/text_style.dart';
 import 'package:bookiastoreapp/core/widgets/mian_button.dart';
-import 'package:bookiastoreapp/feature/auth/presentation/page/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';

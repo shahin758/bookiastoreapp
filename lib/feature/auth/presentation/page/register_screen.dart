@@ -1,7 +1,7 @@
 import 'package:bookiastoreapp/core/constants/app_images.dart';
 import 'package:bookiastoreapp/core/functions/navigation.dart';
 import 'package:bookiastoreapp/core/routes/routes.dart';
-import 'package:bookiastoreapp/core/styles/colors.dart';
+
 import 'package:bookiastoreapp/core/styles/text_style.dart';
 import 'package:bookiastoreapp/core/widgets/custom_svg_picture.dart';
 import 'package:bookiastoreapp/core/widgets/custome_text_form_field.dart';
@@ -27,7 +27,7 @@ class RegisterScreen extends StatelessWidget {
           centerTitle: false,
           automaticallyImplyLeading: false,
           title: GestureDetector(
-            onTap: () => pop(context, Routes.welcomescreen),
+            onTap: () => pop(context, route: Routes.welcomescreen),
             child: Padding(
               padding: const EdgeInsets.all(10),
               child: CustomSvgPicture(path: AppImages.back),
@@ -40,7 +40,7 @@ class RegisterScreen extends StatelessWidget {
             if (state is AuthSuccessState) {
               pushToBase(context, Routes.mainappscreen);
             } else if (state is AuthErrorState) {
-              showErrorDialog(context, state.message);
+              showMyDialog(context, state.message);
             } else if (state is AuthLoadingState) {
               showLoadingDialog(context);
             }
@@ -102,16 +102,12 @@ class RegisterScreen extends StatelessWidget {
                       Gap(30),
 
                       MianButton(
-                        bgColor: AppColors.primaryColor,
                         text: 'Register ',
-                        textColor: AppColors.backgroundcolor,
                         onPressed: () {
                           if (cubit.formKey.currentState!.validate()) {
                             cubit.register();
                           }
                         },
-                        minWidth: 0,
-                        minHeight: 0,
                       ),
 
                       Gap(35),
@@ -134,3 +130,8 @@ class RegisterScreen extends StatelessWidget {
     );
   }
 }
+
+
+
+
+

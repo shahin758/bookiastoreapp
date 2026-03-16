@@ -25,7 +25,7 @@ class _PasswordTextFormFieldState extends State<PasswordTextFormField> {
   Widget build(BuildContext context) {
     return TextFormField(
       obscureText: true,
-
+      controller: widget.controller,
       decoration: InputDecoration(
         hintText: widget.hintText,
         suffixIcon: IconButton(

@@ -5,8 +5,6 @@ import 'package:bookiastoreapp/core/styles/colors.dart';
 import 'package:bookiastoreapp/core/styles/text_style.dart';
 import 'package:bookiastoreapp/core/widgets/custom_svg_picture.dart';
 import 'package:bookiastoreapp/core/widgets/mian_button.dart';
-import 'package:bookiastoreapp/feature/auth/presentation/page/login_screen.dart';
-import 'package:bookiastoreapp/feature/auth/presentation/page/register_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 

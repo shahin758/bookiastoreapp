@@ -21,7 +21,7 @@ abstract class DioProvider {
     );
   }
 
-  static Future<Response> get({
+  static Future<Response> get( {
     required String endpoint,
     Map<String, dynamic>? data,
     Map<String, dynamic>? headers,

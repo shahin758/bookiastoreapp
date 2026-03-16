@@ -3,7 +3,13 @@ import 'package:bookiastoreapp/core/styles/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
-void showErrorDialog(BuildContext context, String errorMsg) {
+enum DialogType { success, error }
+
+void showMyDialog(
+  BuildContext context,
+  String errorMsg, {
+  DialogType type = DialogType.error,
+}) {
   ScaffoldMessenger.of(context).showSnackBar(
     SnackBar(
       behavior: SnackBarBehavior.floating,
@@ -11,7 +17,9 @@ void showErrorDialog(BuildContext context, String errorMsg) {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadiusGeometry.circular(10),
       ),
-      backgroundColor: AppColors.errorcolor,
+      backgroundColor: type == DialogType.error
+          ? AppColors.errorcolor
+          : Colors.green,
       content: Text(errorMsg),
     ),
   );
@@ -20,7 +28,7 @@ void showErrorDialog(BuildContext context, String errorMsg) {
 void showLoadingDialog(BuildContext context) {
   showDialog(
     context: context,
-    
+
     builder: (context) => Center(child: Lottie.asset(AppImages.loading)),
   );
 }

@@ -1,10 +1,9 @@
-import 'package:bookiastoreapp/core/constants/app_images.dart';
 import 'package:bookiastoreapp/core/functions/navigation.dart';
 import 'package:bookiastoreapp/core/functions/validations.dart';
 import 'package:bookiastoreapp/core/routes/routes.dart';
 import 'package:bookiastoreapp/core/styles/colors.dart';
 import 'package:bookiastoreapp/core/styles/text_style.dart';
-import 'package:bookiastoreapp/core/widgets/custom_svg_picture.dart';
+import 'package:bookiastoreapp/core/widgets/custome_back_button.dart';
 import 'package:bookiastoreapp/core/widgets/custome_text_form_field.dart';
 import 'package:bookiastoreapp/core/widgets/dialogs.dart';
 import 'package:bookiastoreapp/core/widgets/mian_button.dart';
@@ -28,13 +27,7 @@ class LoginScreen extends StatelessWidget {
         appBar: AppBar(
           centerTitle: false,
           automaticallyImplyLeading: false,
-          title: GestureDetector(
-            onTap: () => pop(context, Routes.welcomescreen),
-            child: Padding(
-              padding: const EdgeInsets.all(10),
-              child: CustomSvgPicture(path: AppImages.back),
-            ),
-          ),
+          title: CustomeBackButton(),
         ),
 
         body: BlocConsumer<AuthCubit, AuthState>(
@@ -42,7 +35,7 @@ class LoginScreen extends StatelessWidget {
             if (state is AuthSuccessState) {
               pushToBase(context, Routes.mainappscreen);
             } else if (state is AuthErrorState) {
-              showErrorDialog(context, state.message);
+              showMyDialog(context, state.message);
             } else if (state is AuthLoadingState) {
               showLoadingDialog(context);
             }
@@ -77,6 +70,7 @@ class LoginScreen extends StatelessWidget {
                       PasswordTextFormField(
                         hintText: 'Enter your password',
                         controller: cubit.passwordController,
+                        
                         validator: (input) {
                           if (input!.isEmpty) {
                             return 'Wrong Password';
@@ -110,7 +104,6 @@ class LoginScreen extends StatelessWidget {
                         onPressed: () {
                           if (cubit.formKey.currentState!.validate()) {
                             cubit.login();
-                            pushReplacement(context, Routes.mainappscreen);
                           }
                         },
                       ),

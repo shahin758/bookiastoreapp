@@ -30,20 +30,25 @@ class AuthRepo {
 
   static Future<AuthResponse?> login(RegisterParams params) async {
     try {
+      log(params.toJson().toString());
       var response = await DioProvider.post(
         endpoint: Apis.login,
         data: params.toJson(),
       );
       if (response.statusCode == 200) {
-        response.data;
+        log('-----1----------------');
+
         var data = AuthResponse.fromJson(response.data);
         SharedPref.setToken(data.data?.token ?? '');
         SharedPref.setUserInfo(data.data!.user);
         return data;
       } else {
+        log('------2-------------');
         return null;
       }
     } on Exception catch (e) {
+      log('------3-------------');
+
       log(e.toString());
       return null;
     }

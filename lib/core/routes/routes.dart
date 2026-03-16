@@ -6,9 +6,14 @@ import 'package:bookiastoreapp/feature/auth/presentation/page/password_changed_s
 import 'package:bookiastoreapp/feature/auth/presentation/page/register_screen.dart';
 import 'package:bookiastoreapp/feature/auth/presentation/page/splash/splash_screen.dart';
 import 'package:bookiastoreapp/feature/auth/presentation/page/welcome/welcome_screen.dart';
+import 'package:bookiastoreapp/feature/details/presentation/page/details_screen.dart';
+import 'package:bookiastoreapp/feature/home/data/models/best_seller_book_response/product.dart';
 import 'package:bookiastoreapp/feature/home/presentation/page/home_screen.dart';
 import 'package:bookiastoreapp/feature/main/main_app_screen.dart';
+import 'package:bookiastoreapp/feature/wishlist/presentation/cubit/wishlist_cubit.dart';
+import 'package:bookiastoreapp/feature/wishlist/presentation/page/wishlist_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 var globalContext = GlobalKey<NavigatorState>();
@@ -24,6 +29,8 @@ class Routes {
   static String otpverfication = '/otpverfication';
   static String passwordchanged = '/passwordchanged';
   static String forgetpassword = '/passwordchanged';
+  static String detailsscreen = '/detailsscreen';
+  static String wishlistscreen = '/wishlistscreen';
 
   static var routes = GoRouter(
     navigatorKey: globalContext,
@@ -59,6 +66,19 @@ class Routes {
       GoRoute(
         path: forgetpassword,
         builder: (context, state) => ForgetPasswordScreen(),
+      ),
+      GoRoute(
+        path: detailsscreen,
+        builder: (context, state) {
+          return DetailsScreen(model: state.extra as Product);
+        },
+      ),
+      GoRoute(
+        path: wishlistscreen,
+        builder: (context, state) => BlocProvider(
+          create: (context) => WishlistCubit(),
+          child: WishlistScreen(),
+        ),
       ),
     ],
   );

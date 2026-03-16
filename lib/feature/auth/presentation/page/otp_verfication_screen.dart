@@ -28,7 +28,7 @@ class OtpVerficationScreen extends StatelessWidget {
           centerTitle: false,
           automaticallyImplyLeading: false,
           title: GestureDetector(
-            onTap: () => pop(context, Routes.forgetpassword),
+            onTap: () => pop(context,route: Routes.forgetpassword),
             child: Padding(
               padding: const EdgeInsets.all(10),
               child: CustomSvgPicture(path: AppImages.back),
@@ -40,7 +40,7 @@ class OtpVerficationScreen extends StatelessWidget {
             if (state is AuthSuccessState) {
               log('success');
             } else if (state is AuthErrorState) {
-              showErrorDialog(context, state.message);
+              showMyDialog(context, state.message);
             } else if (state is AuthLoadingState) {
               showLoadingDialog(context);
             }
