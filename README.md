@@ -15,6 +15,7 @@ Bookia is a high-performance, cross-platform application designed to streamline 
 - (9) To implement the loading state, I used BlocConsumer to show the loading indicator on the entire page instead of only on the button.
 - (10) call the APIS parallel for homescreen parts (slider & bestseller part )
 - (11) implemented GoRoutes navigation and changed all routes from push to Routes
+- (12) made the wishlist and made cubit for wishlist and you can remove any book from the wishlist 
 
 
 ## 🏗️ Technical Architecture:
@@ -44,6 +45,11 @@ Architecture: Feature-First / Clean Architecture
 <img width="250" height="750" alt="Home screen" src="https://github.com/user-attachments/assets/a01d2e30-81e4-46e0-8f49-ac80482c6beb" />
 <img width="250" height="750" alt="Shimmer" src="https://github.com/user-attachments/assets/446065d0-0a8c-4cee-ae54-837ad096fded" />
 <img width="250" height="750" alt="Text loading shimmer" src="https://github.com/user-attachments/assets/39dc807b-24ca-4777-bc99-1fcb69026fe3" />
+<img width="250" height="750" alt="Screenshot_1773691245" src="https://github.com/user-attachments/assets/63864993-f278-4730-966d-0fb3520fb1a5" />
+<img width="250" height="750" alt="Screenshot_1773691256" src="https://github.com/user-attachments/assets/d05a91a0-963a-4f13-9222-7975e53f9271" />
+<img width="250" height="750" alt="Screenshot_1773691251" src="https://github.com/user-attachments/assets/f1a6ba34-97b7-4d2b-aaf4-ea34cd2c8819" />
+
+
 
 
 
