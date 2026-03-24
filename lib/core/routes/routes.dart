@@ -28,7 +28,7 @@ class Routes {
   static String createnewpassword = '/createnewpassword';
   static String otpverfication = '/otpverfication';
   static String passwordchanged = '/passwordchanged';
-  static String forgetpassword = '/passwordchanged';
+  static String forgetpassword = '/forgetpassword';
   static String detailsscreen = '/detailsscreen';
   static String wishlistscreen = '/wishlistscreen';
 
