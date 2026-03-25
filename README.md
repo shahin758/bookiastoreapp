@@ -55,7 +55,6 @@ Architecture: Feature-First / Clean Architecture
 <img width="250" height="750" alt="Screenshot_1774284833" src="https://github.com/user-attachments/assets/61af330f-1ef2-4715-bdc4-b137779f297f" />
 <img width="250" height="750" alt="Screenshot_1774351548" src="https://github.com/user-attachments/assets/e744be23-37b3-4270-a50f-afada7c9e6f3" />
 <img width="250" height="750" alt="Screenshot_1774436374" src="https://github.com/user-attachments/assets/147d2ed1-600b-48ac-9818-1d487ff80ea8" />
-<img width="250" height="750" alt="Screenshot_1774436374" src="https://github.com/user-attachments/assets/f1a0518b-d6ab-4bbc-8697-d0999bc67c47" />
 <img width="250" height="750" alt="Screenshot_1774349697" src="https://github.com/user-attachments/assets/aed9e130-dc91-4a98-8e1e-a75c0512e2f1" />
 <img width="250" height="750" alt="Screenshot_1774349695" src="https://github.com/user-attachments/assets/0b799e18-2725-4474-bc50-08d84ff72d6a" />
 
