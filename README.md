@@ -48,6 +48,19 @@ Architecture: Feature-First / Clean Architecture
 <img width="250" height="750" alt="Screenshot_1773691245" src="https://github.com/user-attachments/assets/63864993-f278-4730-966d-0fb3520fb1a5" />
 <img width="250" height="750" alt="Screenshot_1773691256" src="https://github.com/user-attachments/assets/d05a91a0-963a-4f13-9222-7975e53f9271" />
 <img width="250" height="750" alt="Screenshot_1773691251" src="https://github.com/user-attachments/assets/f1a6ba34-97b7-4d2b-aaf4-ea34cd2c8819" />
+<img width="250" height="750" alt="Screenshot_1773691256" src="https://github.com/user-attachments/assets/f5deec61-526b-47d7-86ce-01b230db34a7" />
+<img width="250" height="750" alt="Screenshot_1773691245" src="https://github.com/user-attachments/assets/69532075-97d2-4b99-9883-cc536c0432be" />
+<img width="250" height="750" alt="Screenshot_1774351354" src="https://github.com/user-attachments/assets/22725078-e01d-44ae-ba4d-e39512f07f85" />
+<img width="250" height="750" alt="Screenshot_1773691245" src="https://github.com/user-attachments/assets/aac70213-88dc-469d-88c3-9d15b419cee9" />
+<img width="250" height="750" alt="Screenshot_1774284833" src="https://github.com/user-attachments/assets/61af330f-1ef2-4715-bdc4-b137779f297f" />
+<img width="250" height="750" alt="Screenshot_1774351548" src="https://github.com/user-attachments/assets/e744be23-37b3-4270-a50f-afada7c9e6f3" />
+<img width="250" height="750" alt="Screenshot_1774436374" src="https://github.com/user-attachments/assets/147d2ed1-600b-48ac-9818-1d487ff80ea8" />
+<img width="250" height="750" alt="Screenshot_1774436374" src="https://github.com/user-attachments/assets/f1a0518b-d6ab-4bbc-8697-d0999bc67c47" />
+<img width="250" height="750" alt="Screenshot_1774349697" src="https://github.com/user-attachments/assets/aed9e130-dc91-4a98-8e1e-a75c0512e2f1" />
+<img width="250" height="750" alt="Screenshot_1774349695" src="https://github.com/user-attachments/assets/0b799e18-2725-4474-bc50-08d84ff72d6a" />
+
+
+
 
 
 
