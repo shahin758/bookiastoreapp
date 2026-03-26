@@ -3,19 +3,16 @@ Elevating the Digital Reading Experience.
 
 Bookia is a high-performance, cross-platform application designed to streamline the way users discover, organize, and consume literature.  Bookia provides a frictionless gateway to a world of knowledge.
 
-## 🚀 Key Features:
-- (1) Created a Splash Screen with a Future.delayed of 3 seconds.
-- (2) Created a Home Screen that contains two buttons: one for the Login Screen and the other for the Register Screen.
-- (3) The Login Screen contains two TextFormFields with validation, and two options to log in using Google and Apple.
-- (4) Created a Register Screen to allow users to create a new account.
-- (5) Created a Forgot Password Screen that contains one TextFormField to enter the email address and send the verification code to the email.
-- (6) Created an OTP Verification Screen where the user can enter the verification code.
-- (7) Implemented state management and validation on the Login Screen.
-- (8) Implemented validation on the Register Screen and added a loading state for the whole page.
-- (9) To implement the loading state, I used BlocConsumer to show the loading indicator on the entire page instead of only on the button.
-- (10) call the APIS parallel for homescreen parts (slider & bestseller part )
-- (11) implemented GoRoutes navigation and changed all routes from push to Routes
-- (12) made the wishlist and made cubit for wishlist and you can remove any book from the wishlist 
+## ✨ Features
+- 🏠 Home screen with bestseller books & sliders
+- 🛒 Shopping cart & checkout
+- ❤️ Wishlist management
+- 📦 Place order & accept order
+- 👤 Profile management (edit, reset password)
+- 📋 My Orders with tabs (All/Active/Completed)
+- 🔐 Authentication (login/register/forget password/OTP)
+- 🎨 Beautiful UI with shimmer loading & animations
+- ⚡ GoRouter navigation, Dio API calls, SharedPreferences
 
 
 ## 🏗️ Technical Architecture:
@@ -23,9 +20,12 @@ Bookia is a high-performance, cross-platform application designed to streamline 
 By isolating the data, domain, and presentation layers within each feature, the codebase remains decoupled, testable, and easy to navigate as the application scales."
 
 ## 🛠️ Tech Stack:
-Framework: Flutter (Latest Stable)
-Language: Dart
-Architecture: Feature-First / Clean Architecture
+- **Framework**: Flutter 3.10+
+- **State Management**: flutter_bloc 9.1.1 (Cubit pattern)
+- **Networking**: Dio 5.9.2
+- **Routing**: GoRouter 17.1.0
+- **Local Storage**: shared_preferences 2
+
 
 ## 🖼️ Screenshots:
 
@@ -64,7 +64,7 @@ Architecture: Feature-First / Clean Architecture
 <img width="250" height="750" alt="Screenshot_1774449134" src="https://github.com/user-attachments/assets/1d7dcd6d-62a9-4261-9a6f-bac55700de56" />
 <img width="250" height="750" alt="Screenshot_1774449390" src="https://github.com/user-attachments/assets/952e1e6b-9090-4af6-a060-95f46d21dcff" />
 <img width="250" height="750" alt="Screenshot_1774540400" src="https://github.com/user-attachments/assets/0f60f861-ff98-4bfb-b9f2-02608ce14b10" />
-<img width="250" height="750" alt="Screenshot_1774449390" src="https://github.com/user-attachments/assets/34708b9f-07ba-4b41-9510-7415f3b73eb3" />
+
 
 
 
