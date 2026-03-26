@@ -36,19 +36,14 @@ class AuthRepo {
         data: params.toJson(),
       );
       if (response.statusCode == 200) {
-        log('-----1----------------');
-
         var data = AuthResponse.fromJson(response.data);
         SharedPref.setToken(data.data?.token ?? '');
         SharedPref.setUserInfo(data.data!.user);
         return data;
       } else {
-        log('------2-------------');
         return null;
       }
     } on Exception catch (e) {
-      log('------3-------------');
-
       log(e.toString());
       return null;
     }

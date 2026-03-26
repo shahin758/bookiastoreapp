@@ -15,4 +15,22 @@ abstract class Apis {
   static const wishlist = '/wishlist';
   static const addTowishlist = '/add-to-wishlist';
   static const removeFromwishlist = '/remove-from-wishlist';
+
+  //cart
+  static const cart = '/cart';
+  static const addToCart = '/add-to-cart';
+  static const removeFromCart = '/remove-from-cart';
+  static const updateCart = '/update-cart';
+  static const checkout = '/checkout';
+
+  // place order
+  static const governorates = '/governorates';
+
+  //profile
+  static const profile = '/profile';
+  static const updateprofile = '/update-profile';
+  static const updatepassword = '/update-password';
+  static const deleteprofile = '/delete-profile';
+  
+
 }

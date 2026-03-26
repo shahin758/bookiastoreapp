@@ -14,7 +14,6 @@ class WishlistCubit extends Cubit<WishlistState> {
     var data = await WishlistRepo.getWishList();
     if (data != null) {
       products = data.data?.products ?? [];
-      var ids = products.map((item) => item.id.toString()).toList();
       SharedPref.cacheWishListIds(products);
       emit(WishListSuccessState());
     } else {
@@ -27,7 +26,6 @@ class WishlistCubit extends Cubit<WishlistState> {
     var data = await WishlistRepo.removeFromWishList(productId);
     if (data != null) {
       products = data.data?.products ?? [];
-      var ids = products.map((item) => item.id.toString()).toList();
       SharedPref.cacheWishListIds(products);
       emit(WishListSuccessState());
     } else {

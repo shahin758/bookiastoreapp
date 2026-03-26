@@ -1,5 +1,5 @@
-
 import 'package:bookiastoreapp/core/constants/app_images.dart';
+import 'package:bookiastoreapp/core/styles/colors.dart';
 import 'package:bookiastoreapp/core/widgets/custom_svg_picture.dart';
 import 'package:bookiastoreapp/feature/home/presentation/cubit/home_cubit.dart';
 import 'package:bookiastoreapp/feature/home/presentation/widgets/best_seller_books.dart';
@@ -7,8 +7,6 @@ import 'package:bookiastoreapp/feature/home/presentation/widgets/home_slider.dar
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
-
-
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -24,7 +22,12 @@ class HomeScreen extends StatelessWidget {
           actions: [
             IconButton(
               onPressed: () {},
-              icon: CustomSvgPicture(path: AppImages.search),
+              icon: CustomSvgPicture(
+                path: AppImages.search,
+                color: AppColors.darkcolor,
+                height: 28,
+                width: 28,
+              ),
             ),
           ],
         ),

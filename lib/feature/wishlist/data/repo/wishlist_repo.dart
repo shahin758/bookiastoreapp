@@ -32,12 +32,9 @@ class WishlistRepo {
         data: {"product_id": productId},
         headers: {"Authorization": "Bearer ${SharedPref.getToken()}"},
       );
-
       if (response.statusCode == 200) {
-        log('------------------1--------------');
         return WishListResponse.fromJson(response.data);
       } else {
-        log('------------------2--------------');
         return null;
       }
     } catch (e) {

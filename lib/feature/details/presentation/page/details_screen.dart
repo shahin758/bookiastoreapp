@@ -1,8 +1,8 @@
 import 'package:bookiastoreapp/core/styles/colors.dart';
 import 'package:bookiastoreapp/core/styles/text_style.dart';
 import 'package:bookiastoreapp/core/widgets/custome_back_button.dart';
-import 'package:bookiastoreapp/core/widgets/mian_button.dart';
-import 'package:bookiastoreapp/feature/details/presentation/widgets/wish_list_icon.dart';
+import 'package:bookiastoreapp/feature/details/presentation/widgets/cart_action/cart_icon.dart';
+import 'package:bookiastoreapp/feature/details/presentation/widgets/wishlist_action/wish_list_icon.dart';
 import 'package:bookiastoreapp/feature/home/data/models/best_seller_book_response/product.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
@@ -75,12 +75,8 @@ class DetailsScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text('${model.price} \$', style: TextStyles.title24),
-            MianButton(
-              bgColor: AppColors.darkcolor,
-              minWidth: 200,
-              text: 'Add to cart',
-              onPressed: () {},
-            ),
+            CartIcon(id: model.id ?? 0,),
+           
           ],
         ),
       ),

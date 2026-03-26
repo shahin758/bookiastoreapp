@@ -34,7 +34,7 @@ class MianButton extends StatelessWidget {
         side: borderColor != null ? BorderSide(color: borderColor!) : null,
       ),
       onPressed: onPressed,
-      child: Text(text, style: TextStyles.body16.copyWith(color: textColor)),
+      child: Text(text, style: TextStyles.subtitle18.copyWith(color: textColor)),
     );
   }
 }

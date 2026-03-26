@@ -14,10 +14,11 @@ abstract class AppImages {
   static const String profile = 'assets/icons/profile.svg';
   static const String loading = 'assets/images/loading.json';
   static const String logoo = 'assets/icons/logoo.svg';
-  static const String search = 'assets/icons/search.svg';
+  static const String search = 'assets/images/search.svg';
   static const String photo = 'assets/images/photo.png';
-static const String book = 'assets/images/book.png';
-    
-
-
+  static const String book = 'assets/images/book.png';
+  static const String done = 'assets/images/done.svg';
+  static const String donee = 'assets/images/donee.png';
+  static const String searchh = 'assets/images/searchh.svg';
+   //static const String logout = 'assets/images/searchh.svg';
 }

@@ -4,7 +4,7 @@ import 'package:bookiastoreapp/core/styles/colors.dart';
 import 'package:bookiastoreapp/core/widgets/custom_svg_picture.dart';
 import 'package:bookiastoreapp/core/widgets/dialogs.dart';
 import 'package:bookiastoreapp/feature/details/presentation/widgets/wishlist_action/cubit/wishlist_action_cubit.dart';
-import 'package:bookiastoreapp/feature/details/presentation/widgets/wishlist_action/cubit/wishlist_icon_state.dart';
+import 'package:bookiastoreapp/feature/details/presentation/widgets/wishlist_action/cubit/wishlist_action_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
