@@ -56,10 +56,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   children: [
                     Row(
                       children: [
-                        CircleAvatar(
-                          radius: 40,
-                          backgroundColor: AppColors.textcolor,
-                          child: TextShimmer(width: 40, height: 40),
+                        ClipRRect(
+                        borderRadius: BorderRadiusGeometry.circular(100),
+                        
                         ),
                         Gap(16),
                         Column(
@@ -136,7 +135,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     ListTileWidget(
                       title: 'Reset Password',
                       onTap: () {
-                        pushTo(context, Routes.resetpassword);
+                        pushTo(context, Routes.newpasswordscreen);
                       },
                     ),
                     ListTileWidget(title: 'FAQ', onTap: () {}),
@@ -194,7 +193,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     Gap(50),
                     ListTileWidget(title: 'My Orders', onTap: () {pushTo(context, Routes.myorders);}),
                     ListTileWidget(title: 'Edit Profile', onTap: () {pushTo(context, Routes.editprofile);}),
-                    ListTileWidget(title: 'Reset Password', onTap: () {pushTo(context, Routes.resetpassword);}),
+                    ListTileWidget(title: 'Reset Password', onTap: () {pushTo(context, Routes.newpasswordscreen);}),
                     ListTileWidget(title: 'FAQ', onTap: () {}),
                     ListTileWidget(title: 'Contact Us', onTap: () {}),
                     ListTileWidget(title: 'Privacy & Terms', onTap: () {}),
