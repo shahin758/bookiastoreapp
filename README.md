@@ -28,7 +28,7 @@ By isolating the data, domain, and presentation layers within each feature, the 
 
 
 ## 🖼️ Screenshots:
-
+<img width="250" height="750" alt="Screenshot_1774552790" src="https://github.com/user-attachments/assets/74c86fdc-83dc-4ea6-80e0-88ac4df3aa64" />
 <img width="250" height="750" alt="Splash Screen" src="https://github.com/user-attachments/assets/b352eb79-8c6e-4114-9805-8bc22c32e7dc" />
 <img width="250" height="750" alt="Welcome Screen" src="https://github.com/user-attachments/assets/4b9ddcd5-1bba-4273-a12e-8fd49525d5c8" />
 <img width="250" height="750" alt="Login Screen" src="https://github.com/user-attachments/assets/6bb1db4d-43ca-408a-91a5-c4a1e8b402ce" />
@@ -64,6 +64,8 @@ By isolating the data, domain, and presentation layers within each feature, the 
 <img width="250" height="750" alt="Screenshot_1774449134" src="https://github.com/user-attachments/assets/1d7dcd6d-62a9-4261-9a6f-bac55700de56" />
 <img width="250" height="750" alt="Screenshot_1774449390" src="https://github.com/user-attachments/assets/952e1e6b-9090-4af6-a060-95f46d21dcff" />
 <img width="250" height="750" alt="Screenshot_1774540400" src="https://github.com/user-attachments/assets/0f60f861-ff98-4bfb-b9f2-02608ce14b10" />
+<img width="83" height="94" alt="Screenshot 2026-03-26 211902" src="https://github.com/user-attachments/assets/dd5b4c1f-6406-4251-8cf7-d31aa48cb2ed" />
+
 
 
 
