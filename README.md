@@ -56,13 +56,8 @@ By isolating the data, domain, and presentation layers within each feature, the 
 <img width="250" height="750" alt="Screenshot_1774351548" src="https://github.com/user-attachments/assets/e744be23-37b3-4270-a50f-afada7c9e6f3" />
 <img width="250" height="750" alt="Screenshot_1774349697" src="https://github.com/user-attachments/assets/aed9e130-dc91-4a98-8e1e-a75c0512e2f1" />
 <img width="250" height="750" alt="Screenshot_1774349695" src="https://github.com/user-attachments/assets/0b799e18-2725-4474-bc50-08d84ff72d6a" />
-<img width="250" height="750" alt="Screenshot_1774436374" src="https://github.com/user-attachments/assets/147d2ed1-600b-48ac-9818-1d487ff80ea8" />
-<img width="250" height="750" alt="Screenshot_1774436402" src="https://github.com/user-attachments/assets/0f234a7b-0a4d-4f90-921d-527b83649395" />
 <img width="250" height="750" alt="Screenshot_1774441992" src="https://github.com/user-attachments/assets/d0a94fcd-ea61-4bf9-a731-e31ba79ba9a9" />
 <img width="250" height="750" alt="Screenshot_1774447933" src="https://github.com/user-attachments/assets/e3031da3-1c48-40fd-acc3-c6a4e1444888" />
-
-
-
 <img width="250" height="750" alt="Screenshot_1774646608" src="https://github.com/user-attachments/assets/377b4f3d-be79-4b62-8c4e-978c3eb5c832" />
 <img width="250" height="750" alt="Screenshot_1774623865" src="https://github.com/user-attachments/assets/538dbb84-14b3-438e-90e8-3955200375b4" />
 <img width="83" height="94" alt="Screenshot 2026-03-26 211902" src="https://github.com/user-attachments/assets/dd5b4c1f-6406-4251-8cf7-d31aa48cb2ed" />
