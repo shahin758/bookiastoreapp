@@ -1,9 +1,5 @@
 # 📚 Bookia App Store
 
-[![Flutter](https://flutter.dev/images/flutter-logo-sharing.png)](https://flutter.dev)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Pub](https://img.shields.io/pub points)](https://pub.dev)
-
 A modern Flutter app for book shopping with clean UI, state management (Bloc/Cubit), and API integration.
 
 ## ✨ Features
