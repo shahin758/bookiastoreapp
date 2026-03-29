@@ -60,10 +60,10 @@ By isolating the data, domain, and presentation layers within each feature, the 
 <img width="250" height="750" alt="Screenshot_1774447933" src="https://github.com/user-attachments/assets/e3031da3-1c48-40fd-acc3-c6a4e1444888" />
 <img width="250" height="750" alt="Screenshot_1774646608" src="https://github.com/user-attachments/assets/377b4f3d-be79-4b62-8c4e-978c3eb5c832" />
 <img width="250" height="750" alt="Screenshot_1774623865" src="https://github.com/user-attachments/assets/538dbb84-14b3-438e-90e8-3955200375b4" />
-<img width="250" height="750" alt="Screenshot_1774707922" src="https://github.com/user-attachments/assets/e472923b-6067-4235-a2bc-ce66fbf501ca" />
 <img width="250" height="750" alt="Screenshot_1774707922" src="https://github.com/user-attachments/assets/ae4a6287-1de8-4184-9e0a-8622e955dfcd" />
 
-
+<img width="250" height="750" alt="Screenshot_1774775142" src="https://github.com/user-attachments/assets/6ffc17f6-5cd3-4358-9b29-b6655e9dc02c" />
+<img width="250" height="750" alt="Screenshot_1774780718" src="https://github.com/user-attachments/assets/c21a0cad-9094-4421-8519-5c2580e670ce" />
 
 
 
