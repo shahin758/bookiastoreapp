@@ -22,6 +22,26 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
+
+   
+  <key>NSPhotoLibraryUsageDescription</key>
+	<string>Permission for user to update profile image</string>
+
+	<key>NSCameraUsageDescription </key>
+	<string>permission for user to open the camera</string>
+
+
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>permission for access the location</string>
+
+	<key>CFBundleLocalizations</key>
+<array>
+	<string>en</string>
+	<string>ar</string>
+</array>
+
+
+
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>

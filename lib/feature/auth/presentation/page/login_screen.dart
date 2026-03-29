@@ -41,7 +41,7 @@ class LoginScreen extends StatelessWidget {
             }
           },
           builder: (context, state) {
-            var cubit = context.read<AuthCubit>();
+            var   cubit = context.read<AuthCubit>();
             return Padding(
               padding: const EdgeInsets.all(22),
               child: SingleChildScrollView(

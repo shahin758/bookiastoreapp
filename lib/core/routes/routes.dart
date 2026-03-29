@@ -11,9 +11,10 @@ import 'package:bookiastoreapp/feature/details/presentation/page/details_screen.
 import 'package:bookiastoreapp/feature/home/data/models/best_seller_book_response/product.dart';
 import 'package:bookiastoreapp/feature/home/presentation/page/home_screen.dart';
 import 'package:bookiastoreapp/feature/main/main_app_screen.dart';
+import 'package:bookiastoreapp/feature/main_profile/presentation/update_password/presentation/page/update_password.dart';
 import 'package:bookiastoreapp/feature/my_orders/presentation/page/my_order_screen.dart';
-import 'package:bookiastoreapp/feature/profile/presentation/page/edit_profile.dart';
-import 'package:bookiastoreapp/feature/profile/presentation/page/new_password.dart';
+import 'package:bookiastoreapp/feature/main_profile/presentation/edit_profile/cubit/edite_profile_cubit.dart';
+import 'package:bookiastoreapp/feature/main_profile/presentation/edit_profile/page/edite_profile2.dart';
 import 'package:bookiastoreapp/feature/wishlist/presentation/cubit/wishlist_cubit.dart';
 import 'package:bookiastoreapp/feature/wishlist/presentation/page/wishlist_page.dart';
 import 'package:bookiastoreapp/feature/place_order/presentation/page/place_order_screen.dart';
@@ -38,8 +39,9 @@ class Routes {
   static const String wishlistscreen = '/wishlistscreen';
   static const String placeOrder = '/place-order';
   static const String acceptOrder = '/acceptorder';
-  static const String editprofile = '/editprofile';
-  static const String newpasswordscreen = '/newpasswordscreen';
+  //static const String editprofile = '/editprofile';
+  static const String editprofile2 = '/editprofile2';
+  static const String updatepassword = '/newpasswordscreen';
   static const String myorders = '/myorders';
 
   static final GoRouter router = GoRouter(
@@ -59,7 +61,10 @@ class Routes {
       GoRoute(path: homescreen, builder: (context, state) => HomeScreen()),
       GoRoute(
         path: mainappscreen,
-        builder: (context, state) => MainAppScreen(),
+        builder: (context, state) {
+          var selectedIndex = state.extra as int?;
+          return MainAppScreen(selectedIndex: selectedIndex);
+        },
       ),
       GoRoute(
         path: createnewpassword,
@@ -98,14 +103,23 @@ class Routes {
         path: acceptOrder,
         builder: (context, state) => AcceptOrderScreen(),
       ),
+      // GoRoute(
+      // path: editprofile,
+      // builder: (context, state) => EditProfileScreen(),
+      //),
       GoRoute(
-        path: editprofile,
-        builder: (context, state) => EditProfileScreen(),
+        path: editprofile2,
+        builder: (context, state) => BlocProvider(
+          create: (context) => EditeProfileCubit()..loadInitialData(),
+          child: EditeProfile2(),
+        ),
       ),
-      GoRoute(
-        path: newpasswordscreen,
-        builder: (context, state) => NewPasswordScreen(),
+
+       GoRoute(
+        path: updatepassword,
+        builder: (context, state) => UpdatePassword(),
       ),
+
       GoRoute(path: myorders, builder: (context, state) => MyOrdersScreen()),
     ],
   );

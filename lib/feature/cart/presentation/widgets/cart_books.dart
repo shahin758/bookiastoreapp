@@ -8,6 +8,7 @@ import 'package:bookiastoreapp/core/widgets/shimmer/shimmer_widgets.dart';
 import 'package:bookiastoreapp/feature/cart/presentation/cubit/cart_cubit.dart';
 import 'package:bookiastoreapp/feature/cart/presentation/cubit/cart_state.dart';
 import 'package:bookiastoreapp/feature/cart/presentation/widgets/cart_item_widget.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -64,7 +65,7 @@ class CartBooks extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    'Total:',
+                    'total:'.tr(),
                     style: TextStyles.text20.copyWith(
                       fontWeight: FontWeight.w700,
                     ),
@@ -81,7 +82,7 @@ class CartBooks extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: MianButton(
                   bgColor: AppColors.primaryColor,
-                  text: 'Checkout',
+                  text: 'checkout'.tr(),
                   textColor: AppColors.backgroundcolor,
                   onPressed: () {
                     cubit.checkout();

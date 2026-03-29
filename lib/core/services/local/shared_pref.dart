@@ -45,10 +45,10 @@ abstract class SharedPref {
     return jsonToObject;
   }
   //-------------------------------------------------------------------------//
-                //for wishlist
+  //for wishlist
 
   static void cacheWishListIds(List<Product> items) {
-     var ids = items.map((item) => item.id.toString()).toList();
+    var ids = items.map((item) => item.id.toString()).toList();
     cacheData(kWishlist, ids);
   }
 
@@ -62,10 +62,10 @@ abstract class SharedPref {
   }
 
 //---------------------------------------------------------------------------//
-                    // for cart
-                     
-   static void cacheCartIds(List<CartItem> items) {
-     var ids = items.map((item) => item.itemProductId.toString()).toList();
+  // for cart
+
+  static void cacheCartIds(List<CartItem> items) {
+    var ids = items.map((item) => item.itemProductId.toString()).toList();
     cacheData(kCart, ids);
   }
 
@@ -105,4 +105,9 @@ abstract class SharedPref {
   static Future<void> clearData() async {
     await pref.clear();
   }
+
+  static Future<void> saveUserInfo(
+      {required String name,
+      required String phone,
+      required String address}) async {}
 }

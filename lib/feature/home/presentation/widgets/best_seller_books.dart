@@ -4,6 +4,7 @@ import 'package:bookiastoreapp/core/widgets/shimmer/text_shimmer.dart';
 import 'package:bookiastoreapp/feature/home/presentation/cubit/home_cubit.dart';
 import 'package:bookiastoreapp/feature/home/presentation/cubit/home_state.dart';
 import 'package:bookiastoreapp/feature/home/presentation/widgets/book_card.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
@@ -20,7 +21,7 @@ class BestSellerBooks extends StatelessWidget {
           return Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Best Sellers', style: TextStyles.title24),
+              Text('best_sellers'.tr(), style: TextStyles.title24),
               Gap(30),
               GridView.builder(
                 itemCount: books.length,
