@@ -23,6 +23,7 @@ class CartCubit extends Cubit<CartState> {
     }
   }
 
+
   Future<void> removeFromCart(int cartItemId) async {
     emit(CartLoadingState());
     var data = await CartRepo.removeFromCart(cartItemId);

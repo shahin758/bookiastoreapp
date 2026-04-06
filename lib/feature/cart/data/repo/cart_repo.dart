@@ -1,10 +1,15 @@
 import 'dart:developer';
 import 'package:bookiastoreapp/core/services/dio/apis.dart';
 import 'package:bookiastoreapp/core/services/dio/dio_provider.dart';
+import 'package:bookiastoreapp/core/services/dio/failure.dart';
 import 'package:bookiastoreapp/core/services/local/shared_pref.dart';
+import 'package:bookiastoreapp/feature/auth/data/models/auth_reponse/auth_response.dart';
 import 'package:bookiastoreapp/feature/cart/data/model/cart_response/cart_response.dart';
+import 'package:bookiastoreapp/feature/cart/data/model/cart_response/data.dart';
+import 'package:dartz/dartz.dart';
 
 class CartRepo {
+  //---------------------------------------------------------------------------------
   static Future<CartResponse?> getCart() async {
     try {
       var response = await DioProvider.get(
@@ -20,6 +25,23 @@ class CartRepo {
       return null;
     }
   }
+
+  static Future<Either<Failure, Data>> getCart2() async {
+    var response = await DioProvider.getApi(
+        endpoint: Apis.cart,
+        headers: {"Authorization": "Bearer ${SharedPref.getToken()}"});
+    return response.fold(
+      (l) {
+      return Left(l);
+     },
+     (right) {
+      var data = AuthResponse.fromJson(right);
+      return Right(data.user,);
+    }
+    );
+  }
+
+//---------------------------------------------------------------------------------
 
   static Future<CartResponse?> addToCart(int productId) async {
     try {

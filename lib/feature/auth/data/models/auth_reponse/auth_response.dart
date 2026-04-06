@@ -1,12 +1,14 @@
-import 'user.dart';
+import 'package:bookiastoreapp/feature/cart/data/model/cart_response/user.dart';
 
-class Data {
-  User? user;
+
+
+class AuthResponse {
+  dynamic user;
   String? token;
 
-  Data({this.user, this.token});
+  AuthResponse({this.user, this.token});
 
-  factory Data.fromJson(Map<String, dynamic> json) => Data(
+  factory AuthResponse.fromJson(Map<String, dynamic> json) => AuthResponse(
     user: json['user'] == null
         ? null
         : User.fromJson(json['user'] as Map<String, dynamic>),
