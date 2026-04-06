@@ -1,9 +1,5 @@
 # 📚 Bookia App Store
 
-[![Flutter](https://flutter.dev/images/flutter-logo-sharing.png)](https://flutter.dev)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Pub](https://img.shields.io/pub points)](https://pub.dev)
-
 A modern Flutter app for book shopping with clean UI, state management (Bloc/Cubit), and API integration.
 
 ## ✨ Features
@@ -57,11 +53,14 @@ A modern Flutter app for book shopping with clean UI, state management (Bloc/Cub
 <img width="250" height="750" alt="Screenshot_1774441992" src="https://github.com/user-attachments/assets/d0a94fcd-ea61-4bf9-a731-e31ba79ba9a9" />
 <img width="250" height="750" alt="Screenshot_1774447933" src="https://github.com/user-attachments/assets/e3031da3-1c48-40fd-acc3-c6a4e1444888" />
 <img width="250" height="750" alt="Screenshot_1774646608" src="https://github.com/user-attachments/assets/377b4f3d-be79-4b62-8c4e-978c3eb5c832" />
+<img width="250" height="750" alt="Screenshot_1774701430" src="https://github.com/user-attachments/assets/9a72d105-2583-4652-8fc4-4b3308e71a47" />
 
 <img width="250" height="750" alt="Screenshot_1774623865" src="https://github.com/user-attachments/assets/538dbb84-14b3-438e-90e8-3955200375b4" />
 <img width="250" height="750" alt="Screenshot_1774707922" src="https://github.com/user-attachments/assets/ae4a6287-1de8-4184-9e0a-8622e955dfcd" />
 <img width="250" height="750" alt="Screenshot_1774775142" src="https://github.com/user-attachments/assets/6ffc17f6-5cd3-4358-9b29-b6655e9dc02c" />
 <img width="250" height="750" alt="Screenshot_1774780718" src="https://github.com/user-attachments/assets/c21a0cad-9094-4421-8519-5c2580e670ce" />
+<img width="250" height="750" alt="Screenshot_1775478825" src="https://github.com/user-attachments/assets/83f79996-bc5b-41b2-8c9d-b6c3ee7504c8" />
+
 <img width="83" height="94" alt="Screenshot 2026-03-26 211902" src="https://github.com/user-attachments/assets/dd5b4c1f-6406-4251-8cf7-d31aa48cb2ed" />
 
 
