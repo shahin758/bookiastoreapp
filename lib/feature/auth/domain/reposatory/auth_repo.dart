@@ -1,16 +1,48 @@
-import 'dart:developer';
-import 'package:bookiastoreapp/core/services/dio/apis.dart';
-import 'package:bookiastoreapp/core/services/dio/dio_provider.dart';
 import 'package:bookiastoreapp/core/services/dio/failure.dart';
-import 'package:bookiastoreapp/core/services/local/shared_pref.dart';
 import 'package:bookiastoreapp/feature/auth/data/models/auth_reponse/auth_response.dart';
-import 'package:bookiastoreapp/feature/auth/data/models/auth_reponse/register_params.dart';
-import 'package:bookiastoreapp/feature/auth/data/models/otpcode_response.dart';
+import 'package:bookiastoreapp/feature/auth/data/models/auth_reponse/auth_patams.dart';
 import 'package:dartz/dartz.dart';
 
+abstract class AuthReposatory {
+  Future<Either<Failure, AuthResponse>> register(AuthParams params);
+  Future<Either<Failure, AuthResponse>> login(AuthParams params);
+
+  Future<Object?> resetpassword(AuthParams authParams) async {
+    return null;
+  }
+
+  Future<Object?> otpcode(AuthParams authParams) async {
+    return null;
+  }
+
+  Future<Object?> forgetpassword(AuthParams authParams) async {
+    return null;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 class AuthRepo {
   static Future<Either<Failure, AuthResponse>> register(
-    RegisterParams params,
+    AuthParams params,
   ) async {
     var response = await DioProvider.postApi(
       endpoint: Apis.register,
@@ -31,7 +63,7 @@ class AuthRepo {
   }
 
 //---------------------------------------------------------------------------------
-  static Future<Either<Failure,AuthResponse>?> login(RegisterParams params) async {
+  static Future<Either<Failure,AuthResponse>> login(AuthParams params) async { 
     var response = await DioProvider.postApi(
       endpoint: Apis.login,
       data: params.toJson(),
@@ -50,7 +82,7 @@ class AuthRepo {
 
 
 //---------------------------------------------------------------------------------
-  static Future<AuthResponse?> forgetpassword(RegisterParams params) async {
+  static Future<AuthResponse?> forgetpassword(AuthParams params) async {
     try {
       var response = await DioProvider.post(
         endpoint: Apis.forgetpassword,
@@ -68,7 +100,7 @@ class AuthRepo {
     }
   }
 
-  static Future<Otpcode?> otpcode(RegisterParams params) async {
+  static Future<Otpcode?> otpcode(AuthParams params) async {
     try {
       var response = await DioProvider.post(
         endpoint: Apis.otpcode,
@@ -90,7 +122,7 @@ class AuthRepo {
     }
   }
 
-  static Future<Otpcode?> resetpassword(RegisterParams params) async {
+  static Future<Otpcode?> resetpassword(AuthParams params) async {
     try {
       log(params.toJson().toString());
       var response = await DioProvider.post(
@@ -112,4 +144,4 @@ class AuthRepo {
       return null;
     }
   }
-}
+}*/

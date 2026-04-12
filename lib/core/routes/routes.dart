@@ -1,4 +1,11 @@
+import 'package:bookiastoreapp/core/di/service_locator.dart';
 import 'package:bookiastoreapp/feature/accept_order/presentation/page/accept_order_screen.dart';
+
+import 'package:bookiastoreapp/feature/auth/data/data_source/auth_remote_data_source_imp.dart';
+import 'package:bookiastoreapp/feature/auth/data/repo/auth_repo_imp.dart';
+import 'package:bookiastoreapp/feature/auth/domain/usecases/login_usecase.dart';
+import 'package:bookiastoreapp/feature/auth/domain/usecases/register_usecase.dart';
+import 'package:bookiastoreapp/feature/auth/presentation/cubit/auth_cubit.dart';
 import 'package:bookiastoreapp/feature/auth/presentation/page/create_new_password_screen.dart';
 import 'package:bookiastoreapp/feature/auth/presentation/page/forget_password_screen.dart';
 import 'package:bookiastoreapp/feature/auth/presentation/page/login_screen.dart';
@@ -49,16 +56,37 @@ class Routes {
     initialLocation: '/splashscreen',
     routes: [
       GoRoute(path: splashscreen, builder: (context, state) => SplashScreen()),
+//---------------------------------------------------------------------------------
       GoRoute(
         path: welcomescreen,
         builder: (context, state) => WelcomeScreen(),
       ),
-      GoRoute(path: loginscreen, builder: (context, state) => LoginScreen()),
+//---------------------------------------------------------------------------------
+      GoRoute(
+          path: loginscreen,
+          builder: (context, state) => BlocProvider(
+                create: (context) => AuthCubit(
+                  getIt<LoginUsecase>(),
+                  registerUsecase: getIt<RegisterUsecase>(),
+                ),
+                child: LoginScreen(),
+              )),
+
+//---------------------------------------------------------------------------------
       GoRoute(
         path: registerscreen,
-        builder: (context, state) => RegisterScreen(),
+        builder: (context, state) => BlocProvider(
+          create: (context) => AuthCubit(
+            LoginUsecase(AuthReposatoryImp(AuthRemoteDateSourceImpl())),
+            registerUsecase:
+                RegisterUsecase(AuthReposatoryImp(AuthRemoteDateSourceImpl())),
+          ),
+          child: RegisterScreen(),
+        ),
       ),
+//---------------------------------------------------------------------------------
       GoRoute(path: homescreen, builder: (context, state) => HomeScreen()),
+//---------------------------------------------------------------------------------
       GoRoute(
         path: mainappscreen,
         builder: (context, state) {
@@ -66,27 +94,33 @@ class Routes {
           return MainAppScreen(selectedIndex: selectedIndex);
         },
       ),
+//---------------------------------------------------------------------------------
       GoRoute(
         path: createnewpassword,
         builder: (context, state) => CreateNewPasswordScreen(),
       ),
+//---------------------------------------------------------------------------------
       GoRoute(
         path: otpverfication,
         builder: (context, state) => OtpVerficationScreen(),
       ),
+//---------------------------------------------------------------------------------
       GoRoute(
         path: passwordchanged,
         builder: (context, state) => PasswordChangedScreen(),
       ),
+//---------------------------------------------------------------------------------
       GoRoute(
         path: forgetpassword,
         builder: (context, state) => ForgetPasswordScreen(),
       ),
+//
       GoRoute(
         path: detailsscreen,
         builder: (context, state) =>
             DetailsScreen(model: state.extra as Product),
       ),
+//---------------------------------------------------------------------------------
       GoRoute(
         path: wishlistscreen,
         builder: (context, state) => BlocProvider(
@@ -94,11 +128,13 @@ class Routes {
           child: WishlistScreen(),
         ),
       ),
+//---------------------------------------------------------------------------------
       GoRoute(
         path: placeOrder,
         builder: (context, state) =>
             PlaceOrderScreen(total: state.extra as String),
       ),
+//---------------------------------------------------------------------------------
       GoRoute(
         path: acceptOrder,
         builder: (context, state) => AcceptOrderScreen(),
@@ -114,11 +150,12 @@ class Routes {
           child: EditeProfile2(),
         ),
       ),
-
-       GoRoute(
+//---------------------------------------------------------------------------------
+      GoRoute(
         path: updatepassword,
         builder: (context, state) => UpdatePassword(),
       ),
+//---------------------------------------------------------------------------------
 
       GoRoute(path: myorders, builder: (context, state) => MyOrdersScreen()),
     ],

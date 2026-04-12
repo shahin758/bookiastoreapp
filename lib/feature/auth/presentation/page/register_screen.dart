@@ -8,6 +8,10 @@ import 'package:bookiastoreapp/core/widgets/custome_text_form_field.dart';
 import 'package:bookiastoreapp/core/widgets/dialogs.dart';
 import 'package:bookiastoreapp/core/widgets/mian_button.dart';
 import 'package:bookiastoreapp/core/widgets/password_text_form_field.dart';
+import 'package:bookiastoreapp/feature/auth/data/data_source/auth_remote_data_source_imp.dart';
+import 'package:bookiastoreapp/feature/auth/data/repo/auth_repo_imp.dart';
+import 'package:bookiastoreapp/feature/auth/domain/usecases/login_usecase.dart';
+import 'package:bookiastoreapp/feature/auth/domain/usecases/register_usecase.dart';
 import 'package:bookiastoreapp/feature/auth/presentation/cubit/auth_cubit.dart';
 import 'package:bookiastoreapp/feature/auth/presentation/cubit/auth_state.dart';
 import 'package:bookiastoreapp/feature/auth/presentation/widgets/textspan.dart';
@@ -21,7 +25,10 @@ class RegisterScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => AuthCubit(),
+create: (context) {
+  final repo = AuthReposatoryImp(AuthRemoteDateSourceImpl());
+  return AuthCubit( registerUsecase: (repo), loginUsecase: LoginUsecase(repo));
+},
       child: Scaffold(
         appBar: AppBar(
           centerTitle: false,
@@ -105,7 +112,12 @@ class RegisterScreen extends StatelessWidget {
                         text: 'Register ',
                         onPressed: () {
                           if (cubit.formKey.currentState!.validate()) {
-                            cubit.register();
+                            cubit.register(
+                              cubit.usernameController.text,
+                              cubit.emailController.text,
+                              cubit.passwordController.text,
+                              cubit.passwordconfirmationController.text,
+                            );
                           }
                         },
                       ),

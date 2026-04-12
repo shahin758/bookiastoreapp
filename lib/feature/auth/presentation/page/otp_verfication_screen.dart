@@ -8,6 +8,10 @@ import 'package:bookiastoreapp/core/styles/text_style.dart';
 import 'package:bookiastoreapp/core/widgets/custom_svg_picture.dart';
 import 'package:bookiastoreapp/core/widgets/dialogs.dart';
 import 'package:bookiastoreapp/core/widgets/mian_button.dart';
+import 'package:bookiastoreapp/feature/auth/data/data_source/auth_remote_data_source_imp.dart';
+import 'package:bookiastoreapp/feature/auth/data/repo/auth_repo_imp.dart';
+import 'package:bookiastoreapp/feature/auth/domain/usecases/login_usecase.dart';
+import 'package:bookiastoreapp/feature/auth/domain/usecases/register_usecase.dart';
 import 'package:bookiastoreapp/feature/auth/presentation/cubit/auth_cubit.dart';
 import 'package:bookiastoreapp/feature/auth/presentation/cubit/auth_state.dart';
 import 'package:bookiastoreapp/feature/auth/presentation/widgets/textspan.dart';
@@ -22,7 +26,10 @@ class OtpVerficationScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => AuthCubit(),
+create: (context) {
+  final repo = AuthReposatoryImp(AuthRemoteDateSourceImpl());
+  return AuthCubit(LoginUsecase(repo), registerUsecase: RegisterUsecase(repo));
+},
       child: Scaffold(
         appBar: AppBar(
           centerTitle: false,

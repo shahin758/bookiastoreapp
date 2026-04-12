@@ -1,6 +1,6 @@
 import 'package:bookiastoreapp/core/services/local/shared_pref.dart';
 import 'package:bookiastoreapp/feature/home/data/models/best_seller_book_response/product.dart';
-import 'package:bookiastoreapp/feature/wishlist/data/repo/wishlist_repo.dart';
+import 'package:bookiastoreapp/feature/wishlist/domain/reposatory/wishlist_repo.dart';
 import 'package:bookiastoreapp/feature/wishlist/presentation/cubit/wishlist_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

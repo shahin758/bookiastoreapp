@@ -7,7 +7,14 @@ import 'package:dio/dio.dart';
 abstract class DioProvider {
   static late final Dio dio;
   static void init() {
-    dio = Dio(BaseOptions(baseUrl: Apis.baseUrl));
+    dio = Dio(
+      BaseOptions(
+        baseUrl: Apis.baseUrl,
+        connectTimeout: Duration(seconds: 5),
+        sendTimeout: Duration(seconds: 5),
+        receiveTimeout: Duration(seconds: 10),
+      ),
+    );
   }
 
   static Future<Either<Failure, dynamic>> postApi({

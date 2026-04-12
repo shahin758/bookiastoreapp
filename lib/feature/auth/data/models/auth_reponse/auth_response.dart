@@ -1,4 +1,4 @@
-import 'package:bookiastoreapp/feature/cart/data/model/cart_response/user.dart';
+import 'package:bookiastoreapp/feature/auth/data/models/auth_reponse/user.dart';
 
 
 

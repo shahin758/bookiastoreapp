@@ -1,10 +1,10 @@
-class RegisterParams {
+class AuthParams {
   String? name;
   String? email;
   String? password;
   String? passwordConfirmation;
 
-  RegisterParams({
+  AuthParams({
     this.name,
     this.email,
     this.password,
